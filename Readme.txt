@@ -13,7 +13,6 @@ This mod also supports Bob's Enemies, Dytech War, and Natural Evolution Enemies.
 The area of effect, minimum & maximum durations, etc. are stored in config.lua. Feel free to edit these values to increase or decrease the difficulty.
 
 
-
 FAQs:
 -----
 
@@ -30,6 +29,11 @@ A) Yes, you can pick them up and replace them. You can use bots to deconstruct/r
 Q) Will this mod hurt my FPS/UPS?
 A) I have benchmarked this mod under very heavy biter attacks, and even then it still had performance comparable to the popular YARM mod. So if your game runs fine while monitoring several sites with YARM, it should run fine with this.
 Of note, when no entities are affected by EMP, the mod shuts down its on_tick function to improve performance.
+
+Q) What happens if, after I load the mod, later I chicken out and decide I want to remove it?
+A) Well, if you remove this mod from a running game where some entities are disabled by EMP, those entities will not be automatically re-enabled; you'll have to manually pick them up and replace them to re-enable them.
+Other than that everything else should be fine.
+
 
 Credits:
 --------
