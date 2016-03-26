@@ -48,4 +48,4 @@ Thanks to the forum and #factorio IRC denizens for advice & bugtesting.
 
 See also the associated forum thread to give feedback, view screenshots, etc.:
 
-http://www.factorioforums.com/forum/viewtopi
+https://forums.factorio.com/viewtopic.php?f=93&t=22294
