@@ -6,4 +6,5 @@ The larger the enemy and the higher the evolution factor, the bigger the chance 
 
 Version 1.0.1 - March 27, 2016
 ------------------------------
-Gun turrets are now disabled by EMP for half as long as other entities.
+Increased default difficulty settings: all EMP attacks have increased disable duration.
+To compensate, gun turrets are now disabled by EMP for only half as long as other entities. This should encourage using mixed defenses.
