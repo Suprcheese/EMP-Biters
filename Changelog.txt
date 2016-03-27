@@ -1,4 +1,9 @@
 Version 1.0.0 - March 26, 2016
----------------------------------
+------------------------------
 Now, large biters have a chance to give off an EMP blast when they die, temporarily disabling nearby turrets, radars, and logistic & construction robots. Large spitters also have a chance to EMP with their spit.
 The larger the enemy and the higher the evolution factor, the bigger the chance of EMP is.
+
+
+Version 1.0.1 - March 27, 2016
+------------------------------
+Gun turrets are now disabled by EMP for half as long as other entities.

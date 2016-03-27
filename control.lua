@@ -104,7 +104,7 @@ function EMPBlast(location, surface, size, min_duration, max_duration)
 		return
 	else
 		global.disabledEntities = global.disabledEntities or {}
-		disableEntities(gun_turrets, min_duration, max_duration)
+		disableEntities(gun_turrets, min_duration / 2, max_duration / 2)
 		disableEntities(laser_turrets, min_duration, max_duration)
 		disableEntities(logistics_bots, min_duration, max_duration)
 		disableEntities(construction_bots, min_duration, max_duration)
