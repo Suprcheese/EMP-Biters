@@ -6,7 +6,9 @@
 -- Size is in tiles. This is the "radius" (it's a square region actually) of the area of effect around the dying biter for the EMP blast.
 
 -- MaxChance is in percent. This is the maximum chance that a biter will trigger an EMP blast when it dies.
--- The chance starts out a bit lower and increases up to the maximum chance as the evolution factor rises.
+-- The chance starts out at 0% when the evolution factor is 0 and increases up to the maximum chance as the evolution factor rises.
+-- MaxChance can exceed 100, and this just means that it will reach 100% chance at a lower evo factor.
+-- For instance, the Big Worm has a default value of 200, and this means that it reaches 100% chance at 50% evolution factor.
 
 -- Durations are in ticks (60 ticks per second).
 -- The exact duration of the EMP disabling is randomized between the minimum and maximum values.
@@ -43,6 +45,14 @@ EMPBiterTable["dyzilla-unit-4"] = 						{50, 100, 1200, 3000}
 EMPBiterTable["big-biter-Mk2"] = 						{12, 20,  300, 600}
 EMPBiterTable["big-biter-Mk3"] = 						{14, 20,  300, 900}
 
+-- 5dim Battlefield
+EMPBiterTable["5d-medium-biter-laser"] = 				{5,  20,  300, 600}
+EMPBiterTable["5d-medium-biter-physical"] = 			{5,  20,  300, 600}
+EMPBiterTable["5d-medium-biter-explosive"] =			{5,  20,  300, 600}
+EMPBiterTable["5d-big-biter-laser"] = 					{10, 25,  600, 900}
+EMPBiterTable["5d-big-biter-physical"] = 				{10, 25,  600, 900}
+EMPBiterTable["5d-big-biter-explosive"] = 				{10, 25,  600, 900}
+
 
 -- This is the lookup table for EMP spitters & worms. Rather than add its own custom spitters, this mod gives certain extant spitters a chance to disable a turret when they hit it with their spit.
 -- Big worms have a 100% chance to cause an EMP blast, to make turret creep more challenging.
@@ -56,7 +66,7 @@ EMPSpitterTable["EMP-acid-splash-purple-big"] =			{1,  20,  300, 600}
 EMPSpitterTable["EMP-acid-splash-purple-behemoth"] =	{2,  25,  300, 900}
 
 -- Vanilla Big Worm
-EMPSpitterTable["EMP-acid-splash-purple-worm"] =		{20, 100, 600, 1200} -- Suck it, turret creep!
+EMPSpitterTable["EMP-acid-splash-purple-worm"] =		{20, 200, 600, 1200} -- Suck it, turret creep!
 
 -- Bob's Enemies
 EMPSpitterTable["EMP-acid-splash-explosive"] =			{1,  20,  300, 420}  -- "bob-bigger-spitter" and "bob-big-explosive-worm-turret"

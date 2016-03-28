@@ -43,6 +43,7 @@ function entityRemoved(entity)
 		local cloud = global.clouds[entity.position.x .. "_" .. entity.position.y]
 		if cloud then
 			cloud.destroy()
+			global.clouds[entity.position.x .. "_" .. entity.position.y] = nil
 		end
 	end
 end
@@ -58,8 +59,8 @@ function process_tick()
 			local cloud = global.clouds[entity.position.x .. "_" .. entity.position.y]
 			if cloud then
 				cloud.destroy()
+				global.clouds[entity.position.x .. "_" .. entity.position.y] = nil
 			end
-			global.clouds[entity.position.x .. "_" .. entity.position.y] = nil
 			table.remove(global.disabledEntities, i)
 		else
 			if entity and math.random(210) == 7 then
