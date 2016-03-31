@@ -39,31 +39,30 @@ end
 function entityRemoved(entity)
 	local z = findEntity(entity)
 	if z then
-		table.remove(global.disabledEntities, z)
 		local cloud = global.clouds[entity.position.x .. "_" .. entity.position.y]
-		if cloud then
+		if cloud and cloud.valid then
 			cloud.destroy()
 			global.clouds[entity.position.x .. "_" .. entity.position.y] = nil
 		end
+		table.remove(global.disabledEntities, z)
 	end
 end
 
 function process_tick()
 	for i = #global.disabledEntities, 1, -1 do -- Loop over table backwards because some entries get removed within the loop
-		local disabled = global.disabledEntities[i]
-		local entity = disabled[1]
-		if disabled[2] == game.tick then
-			if entity then
-				entity.active = true
-			end
+		local entity = global.disabledEntities[i][1]
+		if (entity == nil) or (entity.valid == false) then
+			table.remove(global.disabledEntities, i)
+		elseif global.disabledEntities[i][2] == game.tick then
+			entity.active = true
 			local cloud = global.clouds[entity.position.x .. "_" .. entity.position.y]
-			if cloud then
+			if cloud and cloud.valid then
 				cloud.destroy()
 				global.clouds[entity.position.x .. "_" .. entity.position.y] = nil
 			end
 			table.remove(global.disabledEntities, i)
 		else
-			if entity and math.random(210) == 7 then
+			if math.random(210) == 7 then
 				entity.surface.create_entity{name = "EMP-disabled-sound-" .. math.random(4), position = entity.position}
 			end
 		end
@@ -71,6 +70,7 @@ function process_tick()
 	if #global.disabledEntities == 0 then
 		global.disabledEntities = nil
 		script.on_event(defines.events.on_tick, nil)
+		global.clouds = {}
 	end
 end
 
@@ -135,7 +135,7 @@ script.on_event(defines.events.on_entity_died, function(event)
 	if not global.disabledEntities then
 		return
 	end
-	if event.entity.type == "ammo-turret" or event.entity.type == "electric-turret" or event.entity.type == "logistic-robot" or event.entity.type == "construction-robot" then
+	if vulnerableEntityTypes[event.entity.type] then
 		event.entity.active = true
 		entityRemoved(event.entity)
 	end
@@ -143,14 +143,14 @@ end)
 
 script.on_event(defines.events.on_preplayer_mined_item, function(event)
 	if not global.disabledEntities then return end
-	if event.entity.type == "ammo-turret" or event.entity.type == "electric-turret" or event.entity.type == "logistic-robot" or event.entity.type == "construction-robot" then
+	if vulnerableEntityTypes[event.entity.type] then
 		entityRemoved(event.entity)
 	end
 end)
 
 script.on_event(defines.events.on_robot_pre_mined, function(event)
 	if not global.disabledEntities then return end
-	if event.entity.type == "ammo-turret" or event.entity.type == "electric-turret" then
+	if vulnerableEntityTypes[event.entity.type] then
 		entityRemoved(event.entity)
 	end
 end)

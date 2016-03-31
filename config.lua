@@ -83,3 +83,14 @@ EMPSpitterTable["EMP-acid-splash-king"] =				{5,  50,  600, 1200}  -- All King-t
 -- Natural Evolution Enemies
 EMPSpitterTable["EMP-acid-splash-infected"] =			{2,  25,  300, 720}  -- "big-spitter-Mk2"
 EMPSpitterTable["EMP-acid-splash-mutated"] =			{2,  25,  300, 900}  -- "big-spitter-Mk3"
+
+
+-- This table enumerates all entity-types that are vulnerable to EMP. Please don't add or remove anything from this table at this time, though.
+
+vulnerableEntityTypes = {}
+
+vulnerableEntityTypes["ammo-turret"] = 				true
+vulnerableEntityTypes["electric-turret"] = 			true
+vulnerableEntityTypes["logistic-robot"] = 			true
+vulnerableEntityTypes["construction-robot"] = 		true
+vulnerableEntityTypes["radar"] = 					true

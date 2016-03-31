@@ -15,3 +15,8 @@ Version 1.0.2 - March 28, 2016
 Added support for the 5dim Battlefield mod and its new enemies.
 Fixed a crash that could happen when picking up a structure that was disabled by EMP.
 Fixed Big Worms' chance to cause an EMP being lower than intended; their chance now increases from 0% at 0% evolution and reaches 100% by 50% evolution -- previously they would not reach 100% chance until 100% evo.
+
+
+Version 1.0.3 - March 31, 2016
+------------------------------
+Fixed a crash that could happen when a radar-type entity was disabled by EMP.
