@@ -43,6 +43,33 @@ if data.raw["projectile"]["area-acid-projectile-purple"] then -- Bob's big worm
 	}
 end
 
+if data.raw["unit"]["bob-huge-acid-spitter"] then
+	data.raw["unit"]["bob-huge-acid-spitter"].attack_parameters.ammo_type = {
+        category = "biological",
+        action =
+        {
+          type = "direct",
+          action_delivery =
+          {
+            type = "projectile",
+            projectile = "EMP-acid-projectile-big",
+            starting_speed = 0.5
+          }
+        }
+    }
+end
+
+if data.raw["projectile"]["electric-spit-projectile"] then -- "bob-big-electric-spitter"
+	local EMP_acid_splash_electric = util.table.deepcopy(data.raw["corpse"]["acid-splash-purple"])
+	EMP_acid_splash_electric.name = "EMP-acid-splash-electric"
+	table.insert(data.raw["projectile"]["electric-spit-projectile"].action.action_delivery.target_effects, {
+		type = "create-entity",
+		entity_name = "EMP-acid-splash-electric",
+		trigger_created_entity = "true"
+	})
+	data:extend({EMP_acid_splash_electric})
+end
+
 if data.raw["projectile"]["explosive-spit-projectile"] then -- "bob-bigger-spitter" and "bob-big-explosive-worm-turret"
 	local EMP_acid_splash_explode = util.table.deepcopy(data.raw["corpse"]["acid-splash-purple"])
 	EMP_acid_splash_explode.name = "EMP-acid-splash-explosive"
@@ -96,6 +123,17 @@ if data.raw["projectile"]["behemoth-spit-projectile"] then -- "bob-behemoth-spit
 		trigger_created_entity = "true"
 	})
 	data:extend({EMP_acid_splash_behemoth})
+end
+
+if data.raw["projectile"]["leviathan-spit-projectile"] then -- "bob-leviathan-spitter"
+	local EMP_acid_splash_leviathan = util.table.deepcopy(data.raw["corpse"]["acid-splash-purple"])
+	EMP_acid_splash_leviathan.name = "EMP-acid-splash-leviathan"
+	table.insert(data.raw["projectile"]["leviathan-spit-projectile"].action.action_delivery.target_effects, {
+		type = "create-entity",
+		entity_name = "EMP-acid-splash-leviathan",
+		trigger_created_entity = "true"
+	})
+	data:extend({EMP_acid_splash_leviathan})
 end
 
 -- Dytech War

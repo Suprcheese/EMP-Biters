@@ -19,12 +19,21 @@ EMPBiterTable = {}
 EMPBiterTable["big-biter"] = 							{10, 15,  300, 600}
 EMPBiterTable["behemoth-biter"] = 						{15, 25,  300, 900}
 
--- Bob's Enemies
+-- Bob's Enemies 0.12.6 and earlier
 EMPBiterTable["bob-bigger-biter"] =						{10, 20,  360, 900}
 EMPBiterTable["bob-biggest-biter"] =					{12, 25,  600, 900}
 EMPBiterTable["bob-fire-biter"] =						{14, 30,  600, 1200}
 EMPBiterTable["bob-titan-biter"] =						{16, 35,  900, 1500}
 EMPBiterTable["bob-behemoth-biter"] =					{18, 40,  1200, 2400}
+-- Bob's Enemies 0.12.7 and later
+EMPBiterTable["bob-big-piercing-biter"] =				{10, 20,  360, 900}
+EMPBiterTable["bob-huge-acid-biter"] =					{12, 25,  600, 900}
+EMPBiterTable["bob-huge-explosive-biter"] =				{12, 25,  600, 900}
+EMPBiterTable["bob-giant-poison-biter"] =				{14, 30,  600, 1200}
+EMPBiterTable["bob-giant-fire-biter"] =					{14, 30,  600, 1200}
+EMPBiterTable["bob-titan-biter"] =						{16, 35,  900, 1500}
+EMPBiterTable["bob-behemoth-biter"] =					{18, 40,  1200, 2400}
+EMPBiterTable["bob-leviathan-biter"] =					{20, 50,  1500, 3000}
 
 -- Dytech War
 EMPBiterTable["teen-berserk-biter"] = 					{10, 10,  300, 600}
@@ -62,30 +71,33 @@ EMPBiterTable["5d-big-biter-explosive"] = 				{10, 25,  600, 900}
 EMPSpitterTable = {}
 
 -- Vanilla Spitters
-EMPSpitterTable["EMP-acid-splash-purple-big"] =			{1,  20,  300, 600}
+EMPSpitterTable["EMP-acid-splash-purple-big"] =			{1,  20,  300, 600}  -- also "bob-huge-acid-spitter"
 EMPSpitterTable["EMP-acid-splash-purple-behemoth"] =	{2,  25,  300, 900}
 
 -- Vanilla Big Worm
 EMPSpitterTable["EMP-acid-splash-purple-worm"] =		{20, 200, 600, 1200} -- Suck it, turret creep!
 
--- Bob's Enemies
-EMPSpitterTable["EMP-acid-splash-explosive"] =			{1,  20,  300, 420}  -- "bob-bigger-spitter" and "bob-big-explosive-worm-turret"
-EMPSpitterTable["EMP-acid-splash-fire"] =				{2,  20,  300, 540}  -- "bob-biggest-spitter" and "bob-big-fire-worm-turret"
-EMPSpitterTable["EMP-acid-splash-poison"] =				{3,  20,  420, 600}  -- "bob-poison-spitter" and "bob-big-poison-worm-turret"
+-- Bob's Enemies 0.12.6 and earlier
+EMPSpitterTable["EMP-acid-splash-explosive"] =			{1,  20,  300, 420}  -- "bob-bigger-spitter"/"bob-huge-explosive-spitter" and "bob-big-explosive-worm-turret"
+EMPSpitterTable["EMP-acid-splash-fire"] =				{2,  20,  300, 540}  -- "bob-biggest-spitter"/"bob-giant-fire-spitter" and "bob-big-fire-worm-turret"
+EMPSpitterTable["EMP-acid-splash-poison"] =				{3,  20,  420, 600}  -- "bob-poison-spitter"/"bob-giant-poison-spitter" and "bob-big-poison-worm-turret"
 EMPSpitterTable["EMP-acid-splash-titan"] =				{4,  25,  600, 900}  -- "bob-titan-spitter"
 EMPSpitterTable["EMP-acid-splash-behemoth"] =			{5,  25,  900, 1200} -- "bob-behemoth-spitter"
+-- Bob's Enemies 0.12.7 and later
+EMPSpitterTable["EMP-acid-splash-electric"] =			{1,  20,  300, 420}  -- "bob-big-electric-spitter"
+EMPSpitterTable["EMP-acid-splash-leviathan"] =			{7,  50,  900, 1500} -- "bob-leviathan-spitter"
 
 -- Dytech War
 EMPSpitterTable["EMP-acid-splash-berserker"] =			{2,  25,  300, 600}  -- All Berzerker-type spitters
 EMPSpitterTable["EMP-acid-splash-elder"] =				{3,  40,  600, 900}  -- All Elder-type spitters
-EMPSpitterTable["EMP-acid-splash-king"] =				{5,  50,  600, 1200}  -- All King-type spitters
+EMPSpitterTable["EMP-acid-splash-king"] =				{5,  50,  600, 1200} -- All King-type spitters
 
 -- Natural Evolution Enemies
 EMPSpitterTable["EMP-acid-splash-infected"] =			{2,  25,  300, 720}  -- "big-spitter-Mk2"
 EMPSpitterTable["EMP-acid-splash-mutated"] =			{2,  25,  300, 900}  -- "big-spitter-Mk3"
 
 
--- This table enumerates all entity-types that are vulnerable to EMP. Please don't add or remove anything from this table at this time, though.
+-- This table enumerates all entity-types that are vulnerable to EMP. Please don't add or remove anything from this table at this time.
 
 vulnerableEntityTypes = {}
 
