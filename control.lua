@@ -63,7 +63,7 @@ function process_tick()
 			end
 			table.remove(global.disabledEntities, i)
 		else
-			if math.random(210) == 7 then
+			if math.random(300) == 7 then
 				entity.surface.create_entity{name = "EMP-disabled-sound-" .. math.random(4), position = entity.position}
 			end
 		end
