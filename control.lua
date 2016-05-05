@@ -49,11 +49,12 @@ function entityRemoved(entity)
 end
 
 function process_tick()
+	local current_tick = game.tick
 	for i = #global.disabledEntities, 1, -1 do -- Loop over table backwards because some entries get removed within the loop
 		local entity = global.disabledEntities[i][1]
-		if (entity == nil) or (entity.valid == false) then
+		if not (entity or entity.valid) then
 			table.remove(global.disabledEntities, i)
-		elseif global.disabledEntities[i][2] == game.tick then
+		elseif global.disabledEntities[i][2] == current_tick then
 			entity.active = true
 			local cloud = global.clouds[entity.position.x .. "_" .. entity.position.y]
 			if cloud and cloud.valid then
