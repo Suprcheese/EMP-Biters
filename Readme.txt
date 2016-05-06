@@ -1,7 +1,7 @@
-EMP Biters 1.0.4
+EMP Biters 1.0.5
 ================
 
-Version 1.0.4 was released May 4, 2016, was tested using Factorio v0.12.33, and was authored by Supercheese.
+Version 1.0.5 was released May 6, 2016, was tested using Factorio v0.12.33, and was authored by Supercheese.
 
 Many mods give the player a whole host of new weapons and defenses to play with, but the poor biters are left behind. It's time they received an upgrade!
 Now, large biters have a chance to give off an EMP blast when they die, temporarily disabling nearby turrets, radars, and logistic & construction robots. Large spitters also have a chance to EMP with their spit.
@@ -29,7 +29,7 @@ Q) Is there any way I can fix my structures when they've been hit with an EMP at
 A) Yes, you can pick them up and replace them. You can use bots to deconstruct/reconstruct them too, but this is risky because the bots themselves are vulnerable to EMP. Other than this, you must wait for the EMP effect to wear off.
 
 Q) Will this mod hurt my FPS/UPS?
-A) I have benchmarked this mod under very heavy biter attacks, and even then it still had performance comparable to the popular YARM mod. So if your game runs fine while monitoring several sites with YARM, it should run fine with this.
+A) I have benchmarked this mod under very heavy biter attacks, and even then it still had better performance than the popular YARM mod. So if your game runs fine while monitoring several sites with YARM, it should run just fine with this.
 Of note, when no entities are affected by EMP, the mod shuts down its on_tick function to improve performance.
 
 Q) What happens if, after I load the mod, later I chicken out and decide I want to remove it?
