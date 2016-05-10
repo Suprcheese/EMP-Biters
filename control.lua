@@ -28,7 +28,7 @@ function On_Load()
 end
 
 function findEntity(entity)
-	for i,t in ipairs(global.disabledEntities) do
+	for i,t in pairs(global.disabledEntities) do
 		if t[1] == entity then
 			return i
 		end
@@ -76,12 +76,13 @@ function process_tick()
 end
 
 function disableEntities(entities, min_duration, max_duration)
-	for i, entity in ipairs(entities) do
+	local current_tick = game.tick
+	for i, entity in pairs(entities) do
 		if not global.clouds[entity.position.x .. "_" .. entity.position.y] and entity.health > 0 then
 			local cloud = entity.surface.create_entity{name = "disabling-EMP-cloud-" .. math.random(4), position = entity.position}
 			global.clouds[entity.position.x .. "_" .. entity.position.y] = cloud
 			entity.active = false
-			table.insert(global.disabledEntities, {entity, game.tick + math.random(min_duration, max_duration)})
+			table.insert(global.disabledEntities, {entity, current_tick + math.random(min_duration, max_duration)})
 		end
 	end
 end
