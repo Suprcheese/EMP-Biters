@@ -52,7 +52,7 @@ function process_tick()
 	local current_tick = game.tick
 	for i = #global.disabledEntities, 1, -1 do -- Loop over table backwards because some entries get removed within the loop
 		local entity = global.disabledEntities[i][1]
-		if not (entity or entity.valid) then
+		if not (entity and entity.valid) then
 			table.remove(global.disabledEntities, i)
 		elseif global.disabledEntities[i][2] == current_tick then
 			entity.active = true
