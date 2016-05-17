@@ -7,9 +7,7 @@ script.on_configuration_changed(function() On_Init() end)
 script.on_load(function() On_Load() end)
 
 function On_Init()
-	if not global.tick then
-		global.tick = game.tick
-	end
+	global.tick = global.tick or game.tick
 	global.clouds = global.clouds or {}
 	if not global.evoFactorFloor then
 		if game.evolution_factor > 0.995 then
