@@ -1,13 +1,13 @@
-EMP Biters 1.0.5
+EMP Biters 1.0.6
 ================
 
-Version 1.0.5 was released May 6, 2016, was tested using Factorio v0.12.33, and was authored by Supercheese.
+Version 1.0.6 was released June 30, 2016, was tested using Factorio v0.13.1, and was authored by Supercheese.
 
 Many mods give the player a whole host of new weapons and defenses to play with, but the poor biters are left behind. It's time they received an upgrade!
 Now, large biters have a chance to give off an EMP blast when they die, temporarily disabling nearby turrets, radars, and logistic & construction robots. Large spitters also have a chance to EMP with their spit.
 The larger the enemy and the higher the evolution factor, the bigger the chance of EMP is.
 
-Gun turrets are only disabled by EMP for half as long as laser turrets, to encourage using mixed defenses.
+Gun turrets and flamethrower turrets are only disabled by EMP for half as long as laser turrets, to encourage using mixed defenses.
 Big Worms have a high chance to cause a large EMP blast with their spit, to make turret creep more challenging.
 
 This mod also supports Bob's Enemies, Dytech War, Natural Evolution Enemies, and 5dim Battlefield.

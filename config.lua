@@ -102,6 +102,7 @@ EMPSpitterTable["EMP-acid-splash-mutated"] =			{2,  25,  300, 900}  -- "big-spit
 vulnerableEntityTypes = {}
 
 vulnerableEntityTypes["ammo-turret"] = 				true
+vulnerableEntityTypes["fluid-turret"] = 			true
 vulnerableEntityTypes["electric-turret"] = 			true
 vulnerableEntityTypes["logistic-robot"] = 			true
 vulnerableEntityTypes["construction-robot"] = 		true

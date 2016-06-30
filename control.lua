@@ -1,5 +1,4 @@
 require "util"
-require "defines"
 require ("config")
 
 script.on_init(function() On_Init() end)
@@ -97,15 +96,17 @@ function EMPBlast(location, surface, size, min_duration, max_duration)
 	end
 	local EMP_area = {{location.x - size, location.y - size}, {location.x + size, location.y + size}}
 	local gun_turrets = surface.find_entities_filtered{area = EMP_area, type="ammo-turret"}
+	local fluid_turrets = surface.find_entities_filtered{area = EMP_area, type="fluid-turret"}
 	local laser_turrets = surface.find_entities_filtered{area = EMP_area, type="electric-turret"}
 	local logistics_bots = surface.find_entities_filtered{area = EMP_area, type="logistic-robot"}
 	local construction_bots = surface.find_entities_filtered{area = EMP_area, type="construction-robot"}
 	local radars = surface.find_entities_filtered{area = EMP_area, type="radar"}
-	if #gun_turrets == 0 and #laser_turrets == 0 and #logistics_bots == 0 and #construction_bots == 0 and #radars == 0 then
+	if #gun_turrets == 0 and #laser_turrets == 0 and #logistics_bots == 0 and #construction_bots == 0 and #radars == 0 and #fluid_turrets == 0 then
 		return
 	else
 		global.disabledEntities = global.disabledEntities or {}
 		disableEntities(gun_turrets, min_duration / 2, max_duration / 2)
+		disableEntities(fluid_turrets, min_duration / 2, max_duration / 2)
 		disableEntities(laser_turrets, min_duration, max_duration)
 		disableEntities(logistics_bots, min_duration, max_duration)
 		disableEntities(construction_bots, min_duration, max_duration)
