@@ -39,3 +39,8 @@ Updated for Factorio 0.13.
 Flamethrower turrets are now also vulnerable to EMP, but like gun turrets, they are only disabled for half as long as laser turrets.
 Further performance optimizations.
 Fix typo leading to possible crash when entity reference becomes invalid while disabled (thanks to caspark for catching this).
+
+
+Version 1.0.7 - August 27, 2016
+-------------------------------
+Updated for Factorio 0.14.
