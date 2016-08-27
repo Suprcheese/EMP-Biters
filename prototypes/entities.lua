@@ -6,13 +6,13 @@ data:extend({ -- Clouds of sparks
 		show_when_smoke_off = true,
 		animation =
 		{
-		  filename = "__EMP Biters__/graphics/EMP-cloud-1.png",
-		  priority = "high",
-		  width = 74,
-		  height = 70,
-		  frame_count = 16,
-		  scale = 0.9,
-		  animation_speed = 0.25
+			filename = "__EMP Biters__/graphics/EMP-cloud-1.png",
+			priority = "high",
+			width = 74,
+			height = 70,
+			frame_count = 16,
+			scale = 0.9,
+			animation_speed = 0.25
 		},
 		slow_down_factor = 0,
 		affected_by_wind = false,
@@ -29,13 +29,13 @@ data:extend({ -- Clouds of sparks
 		show_when_smoke_off = true,
 		animation =
 		{
-		  filename = "__EMP Biters__/graphics/EMP-cloud-2.png",
-		  priority = "high",
-		  width = 74,
-		  height = 70,
-		  frame_count = 16,
-		  scale = 0.9,
-		  animation_speed = 0.25
+			filename = "__EMP Biters__/graphics/EMP-cloud-2.png",
+			priority = "high",
+			width = 74,
+			height = 70,
+			frame_count = 16,
+			scale = 0.9,
+			animation_speed = 0.25
 		},
 		slow_down_factor = 0,
 		affected_by_wind = false,
@@ -52,13 +52,13 @@ data:extend({ -- Clouds of sparks
 		show_when_smoke_off = true,
 		animation =
 		{
-		  filename = "__EMP Biters__/graphics/EMP-cloud-3.png",
-		  priority = "high",
-		  width = 74,
-		  height = 70,
-		  frame_count = 16,
-		  scale = 0.9,
-		  animation_speed = 0.25
+			filename = "__EMP Biters__/graphics/EMP-cloud-3.png",
+			priority = "high",
+			width = 74,
+			height = 70,
+			frame_count = 16,
+			scale = 0.9,
+			animation_speed = 0.25
 		},
 		slow_down_factor = 0,
 		affected_by_wind = false,
@@ -75,13 +75,13 @@ data:extend({ -- Clouds of sparks
 		show_when_smoke_off = true,
 		animation =
 		{
-		  filename = "__EMP Biters__/graphics/EMP-cloud-4.png",
-		  priority = "high",
-		  width = 74,
-		  height = 70,
-		  frame_count = 16,
-		  scale = 0.9,
-		  animation_speed = 0.25
+			filename = "__EMP Biters__/graphics/EMP-cloud-4.png",
+			priority = "high",
+			width = 74,
+			height = 70,
+			frame_count = 16,
+			scale = 0.9,
+			animation_speed = 0.25
 		},
 		slow_down_factor = 0,
 		affected_by_wind = false,
@@ -91,6 +91,7 @@ data:extend({ -- Clouds of sparks
 		spread_duration = 10,
 		color = { r = 0, g = 0.5, b = 1.0, a = 0.5 },
 	},
+
 -- Sound effects
 	{
 		type = "explosion",
@@ -111,10 +112,10 @@ data:extend({ -- Clouds of sparks
 		light = {intensity = 0, size = 0},
 		sound =
 		{
-		  {
-			filename = "__EMP Biters__/sound/Disabled-1.ogg",
-			volume = 0.5
-		  },
+			{
+				filename = "__EMP Biters__/sound/Disabled-1.ogg",
+				volume = 0.5
+			},
 		},
 	},
 	{
@@ -136,10 +137,10 @@ data:extend({ -- Clouds of sparks
 		light = {intensity = 0, size = 0},
 		sound =
 		{
-		  {
-			filename = "__EMP Biters__/sound/Disabled-2.ogg",
-			volume = 0.5
-		  },
+			{
+				filename = "__EMP Biters__/sound/Disabled-2.ogg",
+				volume = 0.5
+			},
 		},
 	},
 	{
@@ -161,10 +162,10 @@ data:extend({ -- Clouds of sparks
 		light = {intensity = 0, size = 0},
 		sound =
 		{
-		  {
-			filename = "__EMP Biters__/sound/Disabled-3.ogg",
-			volume = 0.5
-		  },
+			{
+				filename = "__EMP Biters__/sound/Disabled-3.ogg",
+				volume = 0.5
+			},
 		},
 	},
 	{
@@ -186,12 +187,13 @@ data:extend({ -- Clouds of sparks
 		light = {intensity = 0, size = 0},
 		sound =
 		{
-		  {
-			filename = "__EMP Biters__/sound/Disabled-4.ogg",
-			volume = 0.5
-		  },
+			{
+				filename = "__EMP Biters__/sound/Disabled-4.ogg",
+				volume = 0.5
+			},
 		},
 	},
+
 -- Blue EMP Blasts
 	{
 		type = "explosion",
@@ -214,10 +216,10 @@ data:extend({ -- Clouds of sparks
 		light = {intensity = 2, size = 5},
 		sound =
 		{
-		  {
-			filename = "__EMP Biters__/sound/EMP.ogg",
-			volume = 1.0
-		  },
+			{
+				filename = "__EMP Biters__/sound/EMP.ogg",
+				volume = 1.0
+			},
 		},
 	},
 	{
@@ -241,10 +243,10 @@ data:extend({ -- Clouds of sparks
 		light = {intensity = 2, size = 10},
 		sound =
 		{
-		  {
-			filename = "__EMP Biters__/sound/EMP.ogg",
-			volume = 1.5
-		  },
+			{
+				filename = "__EMP Biters__/sound/EMP.ogg",
+				volume = 1.5
+			},
 		},
 	},
 	{
@@ -268,10 +270,10 @@ data:extend({ -- Clouds of sparks
 		light = {intensity = 2, size = 15},
 		sound =
 		{
-		  {
-			filename = "__EMP Biters__/sound/EMP.ogg",
-			volume = 1.5
-		  },
+			{
+				filename = "__EMP Biters__/sound/EMP.ogg",
+				volume = 1.5
+			},
 		},
 	},
 	{
@@ -295,10 +297,10 @@ data:extend({ -- Clouds of sparks
 		light = {intensity = 2, size = 20},
 		sound =
 		{
-		  {
-			filename = "__EMP Biters__/sound/EMP.ogg",
-			volume = 1.5
-		  },
+			{
+				filename = "__EMP Biters__/sound/EMP.ogg",
+				volume = 1.5
+			},
 		},
 	},
 })
