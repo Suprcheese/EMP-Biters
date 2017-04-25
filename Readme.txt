@@ -1,7 +1,7 @@
-EMP Biters 1.0.7
+EMP Biters 1.1.0
 ================
 
-Version 1.0.7 was released August 27, 2016, was tested using Factorio v0.14.1, and was authored by Supercheese.
+Version 1.1.0 was released April 26, 2017, was tested using Factorio v0.15.2, and was authored by Supercheese.
 
 Many mods give the player a whole host of new weapons and defenses to play with, but the poor biters are left behind. It's time they received an upgrade!
 Now, large biters have a chance to give off an EMP blast when they die, temporarily disabling nearby turrets, radars, and logistic & construction robots. Large spitters also have a chance to EMP with their spit.

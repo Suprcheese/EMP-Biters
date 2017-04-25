@@ -1,5 +1,5 @@
 require "util"
-require ("config")
+require "config"
 
 script.on_init(function() On_Init() end)
 script.on_configuration_changed(function() On_Init() end)
@@ -9,10 +9,10 @@ function On_Init()
 	global.tick = global.tick or game.tick
 	global.clouds = global.clouds or {}
 	if not global.evoFactorFloor then
-		if game.evolution_factor > 0.995 then
+		if game.forces["enemy"].evolution_factor > 0.995 then
 			global.evoFactorFloor = 10
 		else
-			global.evoFactorFloor = math.floor(game.evolution_factor * 10)
+			global.evoFactorFloor = math.floor(game.forces["enemy"].evolution_factor * 10)
 		end
 		global.tick = global.tick + 1800
 	end
@@ -117,10 +117,10 @@ end
 
 script.on_event(defines.events.on_entity_died, function(event)
 	if global.tick < event.tick then
-		if game.evolution_factor > 0.995 then
+		if game.forces["enemy"].evolution_factor > 0.995 then
 			global.evoFactorFloor = 10
 		else
-			global.evoFactorFloor = math.floor(game.evolution_factor * 10)
+			global.evoFactorFloor = math.floor(game.forces["enemy"].evolution_factor * 10)
 		end
 		global.tick = global.tick + 1800
 	end
