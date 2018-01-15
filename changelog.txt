@@ -1,0 +1,60 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 0. 1. 2018
+  Changes:
+    - Updated for Factorio 0.16.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 26. 4. 2017
+  Changes:
+    - Updated for Factorio 0.15.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+Date: 27. 8. 2016
+  Changes:
+    - Updated for Factorio 0.14.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 30. 6. 2016
+  Changes:
+    - Updated for Factorio 0.13.
+    - Flamethrower turrets are now also vulnerable to EMP, but like gun turrets, they are only disabled for half as long as laser turrets.
+    - Further performance optimizations.
+  Bugfixes:
+    - Fix typo leading to possible crash when entity reference becomes invalid while disabled (thanks to caspark for catching this).
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 6. 5. 2016
+  Changes:
+    - Optimize mod performance by caching calls to game.tick.
+    - Slightly reduce how often sounds are emitted by entities when they are disabled by EMP.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 4. 5. 2016
+  Minor Features:
+    - Added support for Bob's Enemies 0.12.7.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 31. 3. 2016
+  Bugfixes:
+    - Fixed a crash that could happen when a radar-type entity was disabled by EMP.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 28. 3. 2016
+  Minor Features:
+    - Added support for the 5dim Battlefield mod and its new enemies.
+  Bugfixes:
+    - Fixed a crash that could happen when picking up a structure that was disabled by EMP.
+    - Fixed Big Worms' chance to cause an EMP being lower than intended; their chance now increases from 0% at 0% evolution and reaches 100% by 50% evolution -- previously they would not reach 100% chance until 100% evo.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 27. 3. 2016
+  Changes:
+    - Increased default difficulty settings: all EMP attacks have increased disable duration.
+    - To compensate, gun turrets are now disabled by EMP for only half as long as other entities. This should encourage using mixed defenses.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0 - First public release
+Date: 26. 3. 2016
+  Major Features:
+    - Now, large biters have a chance to give off an EMP blast when they die, temporarily disabling nearby turrets, radars, and logistic & construction robots. Large spitters also have a chance to EMP with their spit.
+      The larger the enemy and the higher the evolution factor, the bigger the chance of EMP is.
