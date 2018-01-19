@@ -6,7 +6,7 @@ data:extend({ -- Clouds of sparks
 		show_when_smoke_off = true,
 		animation =
 		{
-			filename = "__EMP Biters__/graphics/EMP-cloud-1.png",
+			filename = "__EMP-Biters__/graphics/EMP-cloud-1.png",
 			priority = "high",
 			width = 74,
 			height = 70,
@@ -29,7 +29,7 @@ data:extend({ -- Clouds of sparks
 		show_when_smoke_off = true,
 		animation =
 		{
-			filename = "__EMP Biters__/graphics/EMP-cloud-2.png",
+			filename = "__EMP-Biters__/graphics/EMP-cloud-2.png",
 			priority = "high",
 			width = 74,
 			height = 70,
@@ -52,7 +52,7 @@ data:extend({ -- Clouds of sparks
 		show_when_smoke_off = true,
 		animation =
 		{
-			filename = "__EMP Biters__/graphics/EMP-cloud-3.png",
+			filename = "__EMP-Biters__/graphics/EMP-cloud-3.png",
 			priority = "high",
 			width = 74,
 			height = 70,
@@ -75,7 +75,7 @@ data:extend({ -- Clouds of sparks
 		show_when_smoke_off = true,
 		animation =
 		{
-			filename = "__EMP Biters__/graphics/EMP-cloud-4.png",
+			filename = "__EMP-Biters__/graphics/EMP-cloud-4.png",
 			priority = "high",
 			width = 74,
 			height = 70,
@@ -94,102 +94,25 @@ data:extend({ -- Clouds of sparks
 
 -- Sound effects
 	{
-		type = "explosion",
-		name = "EMP-disabled-sound-1",
-		flags = {"not-on-map"},
-		animations =
+		type = "sound",
+		name = "EMP-disabled-sound",
+		variations =
 		{
 			{
-				filename = "__EMP Biters__/graphics/null.png",
-				priority = "low",
-				width = 32,
-				height = 32,
-				frame_count = 1,
-				line_length = 1,
-				animation_speed = 1
+				filename = "__EMP-Biters__/sound/Disabled-1.ogg",
+				volume = 0.6
 			},
-		},
-		light = {intensity = 0, size = 0},
-		sound =
-		{
 			{
-				filename = "__EMP Biters__/sound/Disabled-1.ogg",
-				volume = 0.5
+				filename = "__EMP-Biters__/sound/Disabled-2.ogg",
+				volume = 0.6
 			},
-		},
-	},
-	{
-		type = "explosion",
-		name = "EMP-disabled-sound-2",
-		flags = {"not-on-map"},
-		animations =
-		{
 			{
-				filename = "__EMP Biters__/graphics/null.png",
-				priority = "low",
-				width = 32,
-				height = 32,
-				frame_count = 1,
-				line_length = 1,
-				animation_speed = 1
+				filename = "__EMP-Biters__/sound/Disabled-3.ogg",
+				volume = 0.6
 			},
-		},
-		light = {intensity = 0, size = 0},
-		sound =
-		{
 			{
-				filename = "__EMP Biters__/sound/Disabled-2.ogg",
-				volume = 0.5
-			},
-		},
-	},
-	{
-		type = "explosion",
-		name = "EMP-disabled-sound-3",
-		flags = {"not-on-map"},
-		animations =
-		{
-			{
-				filename = "__EMP Biters__/graphics/null.png",
-				priority = "low",
-				width = 32,
-				height = 32,
-				frame_count = 1,
-				line_length = 1,
-				animation_speed = 1
-			},
-		},
-		light = {intensity = 0, size = 0},
-		sound =
-		{
-			{
-				filename = "__EMP Biters__/sound/Disabled-3.ogg",
-				volume = 0.5
-			},
-		},
-	},
-	{
-		type = "explosion",
-		name = "EMP-disabled-sound-4",
-		flags = {"not-on-map"},
-		animations =
-		{
-			{
-				filename = "__EMP Biters__/graphics/null.png",
-				priority = "low",
-				width = 32,
-				height = 32,
-				frame_count = 1,
-				line_length = 1,
-				animation_speed = 1
-			},
-		},
-		light = {intensity = 0, size = 0},
-		sound =
-		{
-			{
-				filename = "__EMP Biters__/sound/Disabled-4.ogg",
-				volume = 0.5
+				filename = "__EMP-Biters__/sound/Disabled-4.ogg",
+				volume = 0.6
 			},
 		},
 	},
@@ -202,7 +125,7 @@ data:extend({ -- Clouds of sparks
 		animations =
 		{
 			{
-			filename = "__EMP Biters__/graphics/EMP-blast.png",
+			filename = "__EMP-Biters__/graphics/EMP-blast.png",
 			priority = "high",
 			width = 200,
 			height = 200,
@@ -217,7 +140,7 @@ data:extend({ -- Clouds of sparks
 		sound =
 		{
 			{
-				filename = "__EMP Biters__/sound/EMP.ogg",
+				filename = "__EMP-Biters__/sound/EMP.ogg",
 				volume = 1.0
 			},
 		},
@@ -229,7 +152,7 @@ data:extend({ -- Clouds of sparks
 		animations =
 		{
 			{
-			filename = "__EMP Biters__/graphics/EMP-blast.png",
+			filename = "__EMP-Biters__/graphics/EMP-blast.png",
 			priority = "high",
 			width = 200,
 			height = 200,
@@ -244,7 +167,7 @@ data:extend({ -- Clouds of sparks
 		sound =
 		{
 			{
-				filename = "__EMP Biters__/sound/EMP.ogg",
+				filename = "__EMP-Biters__/sound/EMP.ogg",
 				volume = 1.5
 			},
 		},
@@ -256,7 +179,7 @@ data:extend({ -- Clouds of sparks
 		animations =
 		{
 			{
-			filename = "__EMP Biters__/graphics/EMP-blast.png",
+			filename = "__EMP-Biters__/graphics/EMP-blast.png",
 			priority = "high",
 			width = 200,
 			height = 200,
@@ -271,7 +194,7 @@ data:extend({ -- Clouds of sparks
 		sound =
 		{
 			{
-				filename = "__EMP Biters__/sound/EMP.ogg",
+				filename = "__EMP-Biters__/sound/EMP.ogg",
 				volume = 1.5
 			},
 		},
@@ -283,7 +206,7 @@ data:extend({ -- Clouds of sparks
 		animations =
 		{
 			{
-			filename = "__EMP Biters__/graphics/EMP-blast.png",
+			filename = "__EMP-Biters__/graphics/EMP-blast.png",
 			priority = "high",
 			width = 200,
 			height = 200,
@@ -298,7 +221,7 @@ data:extend({ -- Clouds of sparks
 		sound =
 		{
 			{
-				filename = "__EMP Biters__/sound/EMP.ogg",
+				filename = "__EMP-Biters__/sound/EMP.ogg",
 				volume = 1.5
 			},
 		},
