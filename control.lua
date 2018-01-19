@@ -60,8 +60,8 @@ function process_tick()
 			end
 			table.remove(global.disabledEntities, i)
 		else
-			if math.random(300) == 7 then
-				entity.surface.create_entity{name = "EMP-disabled-sound-" .. math.random(4), position = entity.position}
+			if math.random(200) == 7 then
+				entity.surface.play_sound{path = "EMP-disabled-sound", position = entity.position, volume_modifier = math.random()}
 			end
 		end
 	end
@@ -142,7 +142,7 @@ script.on_event(defines.events.on_entity_died, function(event)
 	end
 end)
 
-script.on_event(defines.events.on_preplayer_mined_item, function(event)
+script.on_event(defines.events.on_pre_player_mined_item, function(event)
 	if not global.disabledEntities then return end
 	if vulnerableEntityTypes[event.entity.type] then
 		entityRemoved(event.entity)

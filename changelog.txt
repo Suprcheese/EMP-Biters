@@ -1,8 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
-Date: 0. 1. 2018
+Date: 19. 1. 2018
   Changes:
     - Updated for Factorio 0.16.
+    - Switch to new play_sound() function rather than spawning "explosion"-type entities to play sounds.
+    - Added more volume variation in the sounds emitted from entities disabled by EMP.
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 26. 4. 2017
