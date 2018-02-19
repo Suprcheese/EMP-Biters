@@ -20,7 +20,7 @@ end
 
 function On_Load()
 	if global.disabledEntities then
-		script.on_event(defines.events.on_tick, process_tick)
+		script.on_event(defines.events.on_tick, process_tick(event))
 	end
 end
 
@@ -45,8 +45,8 @@ function entityRemoved(entity)
 	end
 end
 
-function process_tick()
-	local current_tick = game.tick
+function process_tick(event)
+	local current_tick = event.tick
 	for i = #global.disabledEntities, 1, -1 do -- Loop over table backwards because some entries get removed within the loop
 		local entity = global.disabledEntities[i][1]
 		if not (entity and entity.valid) then
@@ -111,7 +111,7 @@ function EMPBlast(location, surface, size, min_duration, max_duration)
 		disableEntities(logistics_bots, min_duration, max_duration)
 		disableEntities(construction_bots, min_duration, max_duration)
 		disableEntities(radars, min_duration, max_duration)
-		script.on_event(defines.events.on_tick, process_tick)
+		script.on_event(defines.events.on_tick, process_tick(event))
 	end
 end
 
