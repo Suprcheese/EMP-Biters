@@ -139,6 +139,12 @@ data:extend({ -- Clouds of sparks
 		light = {intensity = 2, size = 5},
 		sound =
 		{
+			aggregation =
+			{
+				max_count = 1,
+				remove = true
+			},
+			variations =
 			{
 				filename = "__EMP Biters__/sound/EMP.ogg",
 				volume = 1.0
@@ -166,6 +172,12 @@ data:extend({ -- Clouds of sparks
 		light = {intensity = 2, size = 10},
 		sound =
 		{
+			aggregation =
+			{
+				max_count = 1,
+				remove = true
+			},
+			variations =
 			{
 				filename = "__EMP Biters__/sound/EMP.ogg",
 				volume = 1.5
@@ -193,6 +205,12 @@ data:extend({ -- Clouds of sparks
 		light = {intensity = 2, size = 15},
 		sound =
 		{
+			aggregation =
+			{
+				max_count = 1,
+				remove = true
+			},
+			variations =
 			{
 				filename = "__EMP Biters__/sound/EMP.ogg",
 				volume = 1.5
@@ -220,6 +238,12 @@ data:extend({ -- Clouds of sparks
 		light = {intensity = 2, size = 20},
 		sound =
 		{
+			aggregation =
+			{
+				max_count = 1,
+				remove = true
+			},
+			variations =
 			{
 				filename = "__EMP Biters__/sound/EMP.ogg",
 				volume = 1.5
