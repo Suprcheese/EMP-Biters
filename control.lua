@@ -20,7 +20,7 @@ end
 
 function On_Load()
 	if global.disabledEntities then
-		script.on_event(defines.events.on_tick, process_tick(event))
+		script.on_event(defines.events.on_tick, process_tick)
 	end
 end
 
@@ -111,7 +111,7 @@ function EMPBlast(location, surface, size, min_duration, max_duration)
 		disableEntities(logistics_bots, min_duration, max_duration)
 		disableEntities(construction_bots, min_duration, max_duration)
 		disableEntities(radars, min_duration, max_duration)
-		script.on_event(defines.events.on_tick, process_tick(event))
+		script.on_event(defines.events.on_tick, process_tick)
 	end
 end
 
